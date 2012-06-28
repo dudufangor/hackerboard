@@ -5,8 +5,8 @@ class CreateUsers < ActiveRecord::Migration
 			t.string :email, :null => false, :unique => true
 			t.string :password_hash, :null => false
 			t.string :password_salt, :null => false
-
 			t.timestamps
+		end
   end
 
   def down
