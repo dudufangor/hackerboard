@@ -1,7 +1,3 @@
-=begin
-
-=end
-
 class PasswordEncryptor
 	#Return the password hash and salt that must be stored on user's record
 	#

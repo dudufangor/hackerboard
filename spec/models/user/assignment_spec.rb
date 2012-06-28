@@ -2,9 +2,9 @@ require "spec_helper"
 describe User, "assignment" do
 #	subject {
 #		User.new({
-#			:email => "John Doe",
-#			:name => "john@example.org",
-#			:password => "teste",
+#			:name => "John Doe",
+#			:email => "john@example.org",
+#			:password => "test",
 #			:password_confirmation => "test"
 #		})
 #	}
@@ -13,11 +13,11 @@ describe User, "assignment" do
 #	its(:email) { should eql("john@example.org") }
 #	its(:password_confirmation) { should eql("test") }
 #	its(:password) { should eql("test") }
-	xit "doesn't throw exception" do
+	it "doesn't throw exception" do
 		expect {
 		User.create!({
-			:email => "John Doe",
-			:name => "john@example.org",
+			:name => "John Doe",
+			:email => "john@example.org",
 			:password => "test",
 			:password_confirmation => "test"
 		})

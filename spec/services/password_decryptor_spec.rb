@@ -14,7 +14,8 @@ describe PasswordEncryptor do
 
 		it "encrypts password" do
 			encryption = PasswordEncryptor.encrypt("test")
-			PasswordEncryptor.encrypt("test")
+			actual_hash = PasswordEncryptor.hasher("test", encryption[:salt])
+			actual_hash.should eql (encryption[:hash])
 		end
 	end
 

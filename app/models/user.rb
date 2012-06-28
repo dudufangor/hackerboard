@@ -9,5 +9,6 @@ class User < ActiveRecord::Base
 
 		self.password_salt = encryption[:salt]
 		self.password_hash = encryption[:hash]
+		@password =  password
 	end
 end
