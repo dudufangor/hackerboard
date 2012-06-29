@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 	attr_accessible :name, :email, :password, :password_confirmation
 	attr_accessor :password
-
+	validates_presence_of	:name
 	validates_confirmation_of	:password
 
 	def password=(password)
