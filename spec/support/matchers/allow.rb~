@@ -21,3 +21,8 @@ RSpec::Matchers.define :allow do |*values|
 		failure_message_for_should_not do |record|
 		"expected #{failed.inspect} to be rejected"
 	end
+
+	description do
+		"alllow #{values.inspect} for #{attribute.inspect} attribute"
+	end
+end
