@@ -20,6 +20,6 @@ describe User, "validations" do
 	  })
 	  }
 
-		it { should_not allow(user.email) }
+		it { should_not allow(user.email).for(:email) }
 	end
 end

@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
 	validates_presence_of	:name, :password
 	validates_confirmation_of	:password
 	validates_format_of :email, :with => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
+	validates_uniqueness_of :email
 
 
 	def password=(password)
