@@ -1,0 +1,5 @@
+pt-BR:
+  flash:
+    users:
+      create:
+        notice: "Seu cadastro foi realizado com sucesso!"

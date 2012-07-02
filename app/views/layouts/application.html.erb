@@ -2,22 +2,13 @@
 <html>
 <head>
   <title>Hackerboard</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%#= stylesheet_link_tag    "application", :media => "all" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-	<nav>
-		<ul>
-			<li><%= link_to t("nav.signup"), signup_path%></li>
-		</ul>
-	</nav>
-
-
-
-
-<%= yield %>
-
-<%= javascript_include_tag "application" %>
+	<%= render "shared/header" %>
+	<%= render "shared/flash_messages" %>
+	<%= yield %>
+	<%#= javascript_include_tag "application" %>
 </body>
 </html>
