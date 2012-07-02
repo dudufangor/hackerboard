@@ -1,4 +1,6 @@
 <%= form_for @user, :url => signup_path do |f| %>
+	<%= render "shared/error_messages", :record => @user %>
+
 	<p>
 		<%= f.label :name %>
 		<%= f.text_field :name %>

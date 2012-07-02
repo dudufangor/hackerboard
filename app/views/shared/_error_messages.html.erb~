@@ -1,0 +1,7 @@
+<% unless record.errors.empty? %>
+	<dl class="error-messages">
+		<dt><%= t("form.error_messages") %></dt>
+		<% record.errors.full_message.each do |message|%>
+			<dd><%= message %></dd>
+	</dl>
+<% end %>
