@@ -1,9 +1,19 @@
 class SessionsController < ApplicationController
-def new
+	def new
+	end
 
-end
+	def create
+		reset_session
 
-def create
+		@user = Authenticator.authenticate(params[:email], params[:password])
 
-end
+		if user
+			session[:user_id] = user.id
+			flash[:notice] = t("flash.sessions.create.notice")
+			redirect_to root_path
+		else
+			flash[:alert] = t("flash.sessions.create.alert")
+			render :new
+		end
+	end
 end

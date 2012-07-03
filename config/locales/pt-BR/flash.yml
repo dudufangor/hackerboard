@@ -1,5 +1,8 @@
 pt-BR:
   flash:
+    sessions:
+      create:
+        notice: "Olá, John Doe"
     users:
       create:
         notice: "Seu cadastro foi realizado com sucesso!"

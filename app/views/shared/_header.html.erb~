@@ -1,5 +1,6 @@
-	<nav>
-		<ul>
-			<li><%= link_to t("nav.signup"), signup_path%></li>
-		</ul>
-	</nav>
+<nav>
+	<ul>
+		<li><%= link_to t("nav.signup"), signup_path%></li>
+		<li><%= link_to t("nav.login"), login_path%></li>
+	</ul>
+</nav>

@@ -1,4 +1,11 @@
 pt-BR:
+  form:
+    buttons:
+      login: "Entrar"
+    error_messages: "Verifique o formulário antes de continuar."
+    labels:
+      password: "Senha"
+      email: "E-mail"
   helpers:
     submit:
       user:

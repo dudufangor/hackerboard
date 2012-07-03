@@ -23,10 +23,10 @@ describe "Signup" do
 			page.should have_content("Seu cadastro foi realizado com sucesso!")
 		end
 
-		xit "login with created account'" do
+		it "login with created account'" do
 			fill_in "E-mail", :with => "johndoe@example.com"
 			fill_in "Senha", :with => "test"
-			click_button "Quero acessar minha conta"
+			click_button "Entrar"
 			current_path.should eql(root_path)
 		end
 	end

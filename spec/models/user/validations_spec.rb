@@ -11,15 +11,7 @@ describe User, "validations" do
 	it { should_not allow("invalid").for(:email) }
 
 	context "email uniqueness" do
-	  let! (:user) {
-	  User.create!({
-	  :name => "John Doe",
-		:email => "john@example.com",
-		:password => "test",
-		:password_confirmation => "test"
-	  })
-	  }
-
+	  let! (:user) { users(:john) }
 		it { should_not allow(user.email).for(:email) }
 	end
 end

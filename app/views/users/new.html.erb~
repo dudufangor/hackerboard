@@ -4,16 +4,19 @@
 	<p>
 		<%= f.label :name %>
 		<%= f.text_field :name %>
+		<%= error_for @user, :name%>
 	</p>
 
 	<p>
 		<%= f.label :email %>
 		<%= f.email_field :email %>
+		<%= error_for @user, :email%>
 	</p>
 
 	<p>
 		<%= f.label :password %>
 		<%= f.password_field :password %>
+		<%= error_for @user, :password%>
 	</p>
 
 	<p>
