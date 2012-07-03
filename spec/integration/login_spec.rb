@@ -18,7 +18,7 @@ describe "Login" do
 		end
 
 		it "displays success message" do
-
+				page.should have_content("Que bom que você voltou!")
 		end
 
 		it "displays user name" do

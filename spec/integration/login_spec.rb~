@@ -17,6 +17,10 @@ describe "Login" do
 			current_path.should eql(root_path)
 		end
 
+		it "displays success message" do
+
+		end
+
 		it "displays user name" do
 			page.should have_content("Olá, John Doe")
 		end
