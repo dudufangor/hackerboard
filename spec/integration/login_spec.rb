@@ -27,6 +27,18 @@ describe "Login" do
 	end
 
 	context "with invalid account credentials" do
+		before do
+			visit "/"
+			click_link "Entrar"
+			click_button "Entrar"
+		end
 
+		it "it renders form page" do
+			current_path.should eql(login_path)
+		end
+
+		it "displayes alert message" do
+			page.should have_content("E-mail/senha inválidos")
+		end
 	end
 end

@@ -9,11 +9,15 @@ class SessionsController < ApplicationController
 
 		if user
 			session[:user_id] = user.id
-			flash[:notice] = t("flash.sessions.create.notice")
-			redirect_to root_path
+			redirect_to root_path, :notice => t("flash.sessions.create.notice")
 		else
-			flash[:alert] = t("flash.sessions.create.alert")
+			flash.now.alert = t("flash.sessions.create.alert")
 			render :new
 		end
+	end
+
+	def destroy
+		reset_session
+		redirect_to root_path
 	end
 end
