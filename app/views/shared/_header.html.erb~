@@ -1,3 +1,9 @@
+<% if logged_in? %>
+	<p>
+	<%= t("user.greeting", :name => current_user.name) %>
+	</p>
+<% end %>
+
 <nav>
 	<ul>
 		<li><%= link_to t("nav.signup"), signup_path%></li>

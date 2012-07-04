@@ -8,7 +8,7 @@ describe "Signup" do
 		  click_link "Cadastre-se"
 
 			fill_in "Nome completo", :with => "John Doe"
-			fill_in "E-mail", :with => "johndoe@example.com"
+			fill_in "E-mail", :with => "john@example.com"
 			fill_in "Senha", :with => "test"
 			fill_in "Confirmação de senha", :with => "test"
 
@@ -24,10 +24,9 @@ describe "Signup" do
 		end
 
 		it "login with created account'" do
-			fill_in "E-mail", :with => "johndoe@example.com"
-			fill_in "Senha", :with => "test"
-			click_button "Entrar"
+			login :with => "john@example.com"
 			current_path.should eql(root_path)
+			page.should have_content("Olá, John Doe!")
 		end
 	end
 

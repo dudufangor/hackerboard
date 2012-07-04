@@ -22,7 +22,7 @@ describe "Login" do
 		end
 
 		it "displays user name" do
-			page.should have_content("Olá, John Doe")
+			page.should have_content("Olá, John Doe!")
 		end
 	end
 
