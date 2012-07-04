@@ -6,3 +6,7 @@ pt-BR:
         email: "E-mail"
         password: "Senha"
         password_confirmation: "Confirmação de senha"
+      question:
+        category_id: "Categoria"
+        body: "Detalhes"
+        title: "Pergunta"

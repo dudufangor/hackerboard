@@ -6,6 +6,10 @@ FactoryGirl.define do
 		password_confirmation "test"
 	end
 
+	factory	:category do
+		name "Some category"
+	end
+
 	preload do
 		factory(:john) do
 			FactoryGirl.create(:user)

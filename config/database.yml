@@ -5,6 +5,7 @@ development:
   database: hackerboard_development
   pool: 5
   username: root
+  host: localhost
   password:
   socket: /var/run/mysqld/mysqld.sock
 
@@ -16,6 +17,7 @@ test:
   database: hackerboard_test
   pool: 5
   username: root
+  host: localhost
   password:
   socket: /var/run/mysqld/mysqld.sock
 
@@ -26,5 +28,6 @@ production:
   database: hackerboard_production
   pool: 5
   username: root
+  host: localhost
   password:
   socket: /var/run/mysqld/mysqld.sock

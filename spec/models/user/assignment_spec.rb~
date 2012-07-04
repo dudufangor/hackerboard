@@ -16,8 +16,8 @@ describe User, "assignment" do
 	it "doesn't throw exception" do
 		expect {
 		User.create!({
-			:email => "",
-			:name => "john@example.org",
+			:name => "John Doe",
+			:email => "john@example.org",
 			:password => "test",
 			:password_confirmation => "test"
 		})
