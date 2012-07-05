@@ -13,6 +13,7 @@ Hackerboard::Application.routes.draw do
 
 	controller :questions do
 		get "/questions/new", :action => :new, :as => :new_question
-		post "/questions/new", :action => :create
+		post "/questions/new", :action => :create, :as => false
+		get "/questions/:id", :action => :show, :as => :question
 	end
 end

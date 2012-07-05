@@ -6,4 +6,8 @@ pt-BR:
         alert: "E-mail/senha inválidos"
     users:
       create:
-        notice: "Seu cadastro foi realizado com sucesso!" 
+        notice: "Seu cadastro foi realizado com sucesso!"
+
+    questions:
+      create:
+        notice: "Sua pergunta foi adicionada com sucesso!" 

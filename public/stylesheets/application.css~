@@ -1,0 +1,16 @@
+form span.error {
+	color: red;
+}
+
+.message {
+	color: #fff;
+	padding: 5px 10px;
+}
+
+.message.notice {
+	background: #090;
+}
+
+.message.alert {
+	background: #c00;
+}

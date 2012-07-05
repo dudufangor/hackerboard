@@ -10,4 +10,10 @@ class ApplicationController < ActionController::Base
 	def current_user
 		@current_user ||= session[:user_id] && User.find_by_id(session[:user_id])
 	end
+
+	def require_logged_user
+			return if logged_in?
+
+			redirect_to login_path, :alert => t("flash.auth.alert")
+	end
 end
