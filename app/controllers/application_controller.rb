@@ -16,4 +16,8 @@ class ApplicationController < ActionController::Base
 
 			redirect_to login_path, :alert => t("flash.auth.alert")
 	end
+
+	def self.require_logged_user(options = {})
+		before_filter :require_logged_user, options
+	end
 end
