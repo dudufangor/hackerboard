@@ -1,6 +1,6 @@
 pt-BR:
   nav:
-    signup: "Cadastre-se"
     login: "Entrar"
     logout: "Sair"
     new_question: "Adicionar pergunta"
+    signup: "Cadastre-se"
