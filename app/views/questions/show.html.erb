@@ -1,8 +1,16 @@
 <article>
-	<h1><%= @question.title  %></h1>
+  <h1><%= @question.title %></h1>
 
-	<%= simple_format @question.body %>
+  <%= simple_format @question.body %>
 </article>
 
-<h2>Respostas.</h2>
-<%= render "replies/form", :reply => @reply, :question => @question %>
+<h2>Respostas</h2>
+
+<%= render @question.replies %>
+
+<% if logged_in? %>
+  <%= render "replies/form", :reply => @reply, :question => @question %>
+<% else %>
+  <%= t("reply.need_to_be_logged") %>
+<% end %>
+

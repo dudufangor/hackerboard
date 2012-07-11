@@ -3,6 +3,8 @@ Hackerboard::Application.routes.draw do
 	controller :users do
 		get "/signup", :action => :new
 		post "/signup", :action => :create, :as => false
+		get "/users/:id", :action =>  :show, :as => :user
+
 	end
 
 	controller :sessions do

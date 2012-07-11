@@ -1,14 +1,14 @@
 <% if logged_in? %>
-	<p>
-	<%= t("user.greeting", :name => current_user.name) %>
-	</p>
+  <p>
+    <%= t("user.greeting", :name => current_user.name) %>
+  </p>
 <% end %>
 
 <nav>
-	<ul>
-		<li><%= link_to t("nav.signup"), signup_path%></li>
-		<li><%= link_to t("nav.login"), login_path%></li>
-		<li><%= link_to t("nav.logout"), logout_path%></li>
-		<li><%= link_to t("nav.new_question"), new_question_path%></li>
-	</ul>
+  <ul>
+    <li><%= link_to t("nav.new_question"), new_question_path %></li>
+    <li><%= link_to t("nav.signup"), signup_path %></li>
+    <li><%= link_to t("nav.login"), login_path %></li>
+    <li><%= link_to t("nav.logout"), logout_path %></li>
+  </ul>
 </nav>

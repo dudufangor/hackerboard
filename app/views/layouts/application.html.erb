@@ -5,10 +5,11 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
-	<%= render "shared/header" %>
-	<%= render "shared/flash_messages" %>
-	<%= yield %>
-	<%#= javascript_include_tag "application" %>
+  <%= render "shared/header" %>
+  <%= render "shared/flash_messages" %>
+  <%= yield %>
+  <%#= javascript_include_tag "application" %>
 </body>
 </html>
