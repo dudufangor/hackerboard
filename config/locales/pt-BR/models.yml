@@ -10,3 +10,8 @@ pt-BR:
         category_id: "Categoria"
         body: "Detalhes"
         title: "Pergunta"
+      category:
+        name: "Categoria"
+      reply:
+        body: "Resposta"
+

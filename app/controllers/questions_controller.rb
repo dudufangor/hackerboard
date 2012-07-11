@@ -1,32 +1,33 @@
 class QuestionsController < ApplicationController
-	require_logged_user :only => [:new, :create]
-	helper_method :categories
+  require_logged_user :only => [:new, :create]
 
-	def index
-	end
+  helper_method :categories
 
-	def new
-		@question = Question.new
-	end
+  def index
+  end
 
-	def create
-		@question = current_user.questions.new(params[:question])
+  def show
+    @question = Question.find(params[:id])
+    @reply = Reply.new
+  end
 
-		if @question.save
-			notic_path = "flash.questions.create.notice"
-			redirect_to question_path(@question), :notice => t(notic_path)
-		else
-			render :new
-	  end
-	end
+  def new
+    @question = Question.new
+  end
 
-	def show
-		@question = Question.find(params[:id])
-		@reply = Reply.new
-	end
+  def create
+    @question = current_user.questions.new(params[:question])
 
-	private
-	def categories
-		@categories ||= Category.scoped
-	end
+    if @question.save
+      redirect_to question_path(@question), :notice => t("flash.questions.create.notice")
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def categories
+    @categories ||= Category.scoped
+  end
 end

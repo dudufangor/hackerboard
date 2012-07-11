@@ -13,3 +13,8 @@ pt-BR:
     questions:
       create:
         notice: "Sua pergunta foi adicionada com sucesso!" 
+    replies:
+      create:
+        notice: "Sua resposta foi adicionada!"
+        alert: "Você precisa preencher sua resposta."
+

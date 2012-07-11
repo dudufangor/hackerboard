@@ -13,3 +13,6 @@ pt-BR:
 
       question:
         create: "Adicionar pergunta"
+
+      reply:
+        create: "Adicionar resposta"
