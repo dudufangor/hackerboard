@@ -4,7 +4,7 @@ require "spec_helper"
 describe "Create questions" do
 	context "when logged" do
 		let!(:user) { users(:john) }
-		let!(:category) { FactoryGirl.create(:category) }
+		let!(:category) {categories(:ruby) }
 
 	  context "with valid data" do
 	  	before do

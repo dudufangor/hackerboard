@@ -3,3 +3,6 @@
 
 	<%= simple_format @question.body %>
 </article>
+
+<h2>Respostas.</h2>
+<%= render "replies/form", :reply => @reply, :question => @question %>

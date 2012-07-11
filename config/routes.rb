@@ -16,4 +16,9 @@ Hackerboard::Application.routes.draw do
 		post "/questions/new", :action => :create, :as => false
 		get "/questions/:id", :action => :show, :as => :question
 	end
+
+	controller :replies do
+		post "/questions/:question_id/replies/new", :action => :create, :as => :new_reply
+
+	end	
 end
