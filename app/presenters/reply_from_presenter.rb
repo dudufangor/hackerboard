@@ -6,13 +6,13 @@ class ReplyFormPresenter
 	end
 
 	def partial
-		["reply/form", :question => @question, :reply => @reply]
+		if @user
+			:partial => "reply/form", :locals => {:question => @question, :reply => @reply}
+		else
+			:partial => "reply/require_login"
+		end
+			
 	end
 end
 
 __END__
-<% if logged_in? %>
-  <%= render "replies/form", :reply => @reply, :question => @question %>
-<% else %>
-  <%= t("reply.need_to_be_logged") %>
-<% end %>

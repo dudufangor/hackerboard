@@ -1,5 +1,4 @@
 require 'spec_helper'
-
 describe ReplyFormPresenter do
 	let(:user) { mock("user") }
 	let(:question) { mock("question") }
@@ -20,7 +19,7 @@ context "when user is missing" do
 		ReplyFormPresenter.new(nil, question, reply)
 	}
 
-	it(:partial) {
+	its(:partial) {
 		should eql("reply/require_login")
 	}
 end
