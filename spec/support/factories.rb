@@ -25,5 +25,9 @@ FactoryGirl.define do
 		factory(:ruby) do
 			FactoryGirl.create(:category)
  		end
+
+ 		factory(:about_rails) do
+ 			FactoryGirl.create(:question, { :category => categories(:ruby), :user => users(:john) })
+ 		end
 	end
 end

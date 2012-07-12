@@ -9,6 +9,7 @@ class QuestionsController < ApplicationController
   def show
     @question = Question.find(params[:id])
     @reply = Reply.new
+    @reply_form = ReplyFormPresenter.new(current_user, @question, @reply)
   end
 
   def new
