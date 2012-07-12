@@ -1,5 +1,0 @@
-<article>
-	<h1><%= @question.title  %></h1>
-
-	<%= simple_format @question.body %>
-</article>

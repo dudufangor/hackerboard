@@ -1,5 +1,0 @@
-	<nav>
-		<ul>
-			<li><%= link_to t("nav.signup"), signup_path%></li>
-		</ul>
-	</nav>
