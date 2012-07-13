@@ -4,6 +4,7 @@ class QuestionsController < ApplicationController
   helper_method :categories
 
   def index
+    @questions = QuestionFilter.filter(params[:filter])
   end
 
   def show

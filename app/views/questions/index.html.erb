@@ -1,1 +1,12 @@
 <h1>Últimas perguntas</h1>
+
+<ul>
+	<li>
+		<%= link_to t("filter.all"), root_path %>
+
+	<li>
+		<%= link_to t("filter.unanswered"), questions_path(:filter => QuestionFilter::UNANSWERED) %>
+	</li>
+</ul>
+
+<%= render @questions %>

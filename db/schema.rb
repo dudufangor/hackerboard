@@ -11,21 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120705195516) do
+ActiveRecord::Schema.define(:version => 20120713143808) do
 
   create_table "categories", :force => true do |t|
-    t.string   "name",       :null => false
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "name",                           :null => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
+    t.integer  "questions_count", :default => 0
   end
 
   create_table "questions", :force => true do |t|
-    t.string   "title",       :null => false
-    t.text     "body",        :null => false
-    t.integer  "user_id",     :null => false
-    t.integer  "category_id", :null => false
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.string   "title",                        :null => false
+    t.text     "body",                         :null => false
+    t.integer  "user_id",                      :null => false
+    t.integer  "category_id",                  :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+    t.integer  "replies_count", :default => 0
   end
 
   add_index "questions", ["user_id"], :name => "index_questions_on_user_id"
@@ -42,12 +44,16 @@ ActiveRecord::Schema.define(:version => 20120705195516) do
   add_index "replies", ["user_id"], :name => "index_replies_on_user_id"
 
   create_table "users", :force => true do |t|
-    t.string   "name",          :null => false
-    t.string   "email",         :null => false
-    t.string   "password_hash", :null => false
-    t.string   "password_salt", :null => false
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.string   "name",                           :null => false
+    t.string   "email",                          :null => false
+    t.string   "password_hash",                  :null => false
+    t.string   "password_salt",                  :null => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
+    t.integer  "questions_count", :default => 0
+    t.integer  "replies_count",   :default => 0
   end
+
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
 
 end
