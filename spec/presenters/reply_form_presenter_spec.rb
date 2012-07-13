@@ -10,7 +10,7 @@ context "when user is present" do
 	}
 
 	its(:partial) { 
-		should eql(["reply/form", :question => question, :reply => reply]) 
+		should eql(:partial => "replies/form", :locals => {:question => question, :reply => reply}) 
 	}
 end
 
@@ -20,7 +20,7 @@ context "when user is missing" do
 	}
 
 	its(:partial) {
-		should eql("reply/require_login")
+		should eql(:partial => "replies/require_login")
 	}
 end
 
