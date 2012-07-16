@@ -17,8 +17,8 @@ Hackerboard::Application.routes.draw do
 		get "/questions", :action => :index, :as => :questions
 		get "/questions/new", :action => :new, :as => :new_question
 		post "/questions/new", :action => :create, :as => false
-		get "/questions/:id", :action => :show, :as => :question
 		get "/questions/search", :action => :search, :as => :search_questions
+		get "/questions/:id", :action => :show, :as => :question
 	end
 
 	controller :replies do

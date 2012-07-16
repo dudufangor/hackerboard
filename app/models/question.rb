@@ -13,6 +13,7 @@ class Question < ActiveRecord::Base
   validates_presence_of :title, :body, :category, :user
 
   define_index do
+    set_property :delta => true
     indexes title
     indexes body
   end

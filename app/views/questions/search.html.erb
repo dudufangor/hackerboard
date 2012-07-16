@@ -1,0 +1,11 @@
+<h1>Sua busca</h1>
+<p>
+	Sua busca por <strong><%= params[:query].inspect %></strong>
+	retornou os seguintes resultados:
+</p>
+
+<% iterate @questions do |question| %>
+	<%= render question %>
+<% end %>
+
+<%= paginate @questions %>

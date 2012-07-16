@@ -7,6 +7,10 @@ class QuestionsController < ApplicationController
     @questions = QuestionFilter.filter(params)
   end
 
+  def search
+    @questions = QuestionSearch.search(params)
+  end
+
   def show
     @question = Question.find(params[:id])
     @reply = Reply.new
