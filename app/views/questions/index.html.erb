@@ -1,23 +1,23 @@
-
 <h1>Últimas perguntas</h1>
 
 <ul>
-	<li>
-		<%= link_to t("filter.all"), root_path %>
+  <li>
+    <%= link_to t("filter.all"), questions_path %>
+  </li>
 
-	<li>
-		<%= link_to t("filter.unanswered"), questions_path(:filter => QuestionFilter::UNANSWERED) %>
-	</li>
+  <li>
+    <%= link_to t("filter.unanswered"), questions_path(:filter => QuestionFilter::UNANSWERED) %>
+  </li>
 </ul>
 
 <% content_for :paginate do %>
-	<%= paginate @questions %>
+  <%= paginate @questions %>
 <% end %>
 
 <%= yield :paginate %>
 
 <% iterate @questions do |question| %>
-	<%= render question %>
+  <%= render question %>
 <% end %>
 
 <%= yield :paginate %>

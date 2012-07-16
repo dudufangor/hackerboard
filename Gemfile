@@ -8,6 +8,7 @@ gem 'thinking-sphinx'
 group :development do
 	gem "pry", require: false
 	gem "awesome_print", require: false
+	gem "mailcatcher"
 end
 
 group :development, :test do

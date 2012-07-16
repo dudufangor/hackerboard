@@ -5,8 +5,9 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(params[:user])
+    signup = Signup.new(@user, login_url)
 
-    if @user.save
+    if signup.complete
       flash[:notice] = t("flash.users.create.notice")
       redirect_to login_path
     else
