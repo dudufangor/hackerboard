@@ -3,6 +3,19 @@ class QuestionsController < ApplicationController
 
   helper_method :categories
 
+  rescue_from Riddle::ConnectionError do
+    redirect_to root_path, :alert => t("flash.questions.search.alert")
+  end
+
+  rescue_from ActiveRecord::RecordNotFound do
+    case request.format.symbol
+    when :html
+      render :file => Rails.root.join("public/404.html"), :status => 404
+    when :json
+      render :json=>{:error => "Question not found"}, :status => 404
+    end
+  end
+
   def index
     @questions = QuestionFilter.filter(params)
   end
