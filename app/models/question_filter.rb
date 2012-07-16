@@ -1,9 +1,10 @@
 class	QuestionFilter
 	UNANSWERED = "unanswered"
 
-	def self.filter(filter)
+	def self.filter(options = {})
 		scope = Question.recent.includes(:user, :category)
-		scope = scope.unanswered if filter == UNANSWERED
+		scope = scope.paginate(options[:page])
+		scope = scope.unanswered if options[:filter] == UNANSWERED
 		scope
 	end
 end

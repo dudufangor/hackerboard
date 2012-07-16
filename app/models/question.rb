@@ -11,4 +11,10 @@ class Question < ActiveRecord::Base
 
 
   validates_presence_of :title, :body, :category, :user
+
+  define_index do
+    indexes title
+    indexes body
+  end
+  
 end

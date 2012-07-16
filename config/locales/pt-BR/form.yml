@@ -2,8 +2,12 @@ pt-BR:
   form:
     buttons:
       login: "Entrar"
+      search: "OK"
 
     error_messages: "Verifique o formulário antes de continuar."
+    labels:
+      search: "Faça sua busca"
+
 
   helpers:
     submit:

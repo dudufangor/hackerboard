@@ -29,6 +29,7 @@ Hackerboard::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   config.active_record.auto_explain_threshold_in_seconds = 0.5
 
+=begin
 	silence_warnings do
         begin
             require 'pry'
@@ -36,5 +37,7 @@ Hackerboard::Application.configure do
         rescue LoadError
         end
   end
+=end
+
 
 end
