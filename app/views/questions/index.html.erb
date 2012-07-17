@@ -11,8 +11,15 @@
   <%= paginate @questions %>
 <% end %>
 
+
+
 <% iterate @questions do |question| %>
   <%= render question %>
 <% end %>
 
 <%= yield :paginate %>
+
+<% content_for :sidebar do %>
+	<%= render "categories", :categories => @sidebar.categories %>
+	<%= render "users", :users => @sidebar.users %>
+<% end %>

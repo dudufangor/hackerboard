@@ -17,4 +17,9 @@ class Question < ActiveRecord::Base
     indexes title
     indexes body
   end
+
+  def viewed!
+    increment!(:views_count)
+  end
+
 end

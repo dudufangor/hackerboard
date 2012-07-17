@@ -18,9 +18,11 @@
 
   		<aside class="sidebar">
 		  	<%= render "questions/search" %>
+        <%= yield :sidebar %>
   		</aside>
 
   	</div>
   </div>
+  <%= javascript_include_tag "jquery", "script" %>
 </body>
 </html>

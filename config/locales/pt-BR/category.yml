@@ -1,0 +1,5 @@
+pt-BR:
+  category:
+    questions_html:
+      one: "<strong>1 <span>pergunta</span></strong>"
+      other: "<strong>%{count} <span>perguntas</span></strong>"

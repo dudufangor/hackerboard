@@ -12,8 +12,8 @@ module ApplicationHelper
   #
   def profile_link(user)
     content_tag :span, :class => "user" do
-      link_to(gravatar(user.email, :alt => user.name)) +
-      link_to(user.name, user_path(user))
+      link_to(gravatar(user.email, :alt => user.name), user_path(user), :class => "avatar") +
+      link_to(user.name, user_path(user), :class => "name")
     end
   end
 

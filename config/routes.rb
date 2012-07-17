@@ -1,5 +1,12 @@
 Hackerboard::Application.routes.draw do
 	root :to => "questions#index"
+
+	controller :feed do
+		get "/feed/questions/:id", :action => :replies, :as => :replies_feed
+		get "/feed/questions", :action => :questions, :as => :questions_feed
+		get "/feed/categories/:id", :action => :categories, :as => :category_feed	
+	end
+
 	controller :users do
 		get "/signup", :action => :new
 		post "/signup", :action => :create, :as => false
@@ -11,6 +18,10 @@ Hackerboard::Application.routes.draw do
 		get "/login", :action => :new
 		post "/login", :action => :create, :as => false
 		get "/logout", :action => :destroy
+	end
+
+	controller :categories do 
+		get "/category/:id", :action => :show, :as => :category
 	end
 
 	controller :questions do

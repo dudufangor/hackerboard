@@ -11,12 +11,10 @@ class Signup
 	end
 
 	def send_welcome_email
-		fork do
 			Mailer.welcome({
 			:email => @user.email,
 			:name => @user.name,
 			:url => @url
 			}).deliver
-		end
 	end
 end

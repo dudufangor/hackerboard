@@ -1,0 +1,10 @@
+<h1><%= t("sidebar.categories") %></h1>
+
+<ul class="categories">
+	<% categories.each do |category| %>
+			<li>  
+				<%= link_to category.name, category_path(category) %>
+				<%= t("category.questions_html", :count => category.questions_count) %>
+			</li>
+	<% end %>
+</ul>

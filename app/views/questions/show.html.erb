@@ -2,11 +2,33 @@
   <h1><%= @question.title %></h1>
 
   <%= simple_format @question.body %>
+
+  <p class="about">
+  	<%= profile_link(@question.user) %>
+  	<%= t("question.about_question", :time => l(@question.created_at, :format => :short)) %>
+  </p>
 </article>
 
-<h2>Respostas</h2>
+<h2><%= t("question.replies_html", :count => @question.replies_count) %></h2>
 
 <%= render @question.replies %>
 <%= render @reply_form.partial %>
 
+<% content_for :sidebar do %>
+	<h3><%= t("sidebar.about") %></h3>
 
+	<ul class="stats">
+		<li>
+			<%= t("question.views_html", :count => @question.views_count) %>
+		</li>
+			<%= t("question.replies_html", :count => @question.replies_count) %>
+		<li>
+			<span></span>
+		</li>
+
+		<li>
+
+		</li>	
+
+	</ul>
+<% end %>

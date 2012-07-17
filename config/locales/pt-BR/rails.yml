@@ -55,39 +55,39 @@ pt-BR:
   datetime:
     distance_in_words:
       about_x_hours:
-        one: aproximadamente 1 hora
-        other: aproximadamente %{count} horas
+        one: há 1 hora
+        other: há %{count} horas
       about_x_months:
-        one: aproximadamente 1 mês
-        other: aproximadamente %{count} meses
+        one: há 1 mês
+        other: há %{count} meses
       about_x_years:
-        one: aproximadamente 1 ano
-        other: aproximadamente %{count} anos
+        one: há 1 ano
+        other: há %{count} anos
       almost_x_years:
-        one: quase 1 ano
-        other: quase %{count} anos
-      half_a_minute: meio minuto
+        one: há 1 ano
+        other: há %{count} anos
+      half_a_minute: há meio minuto
       less_than_x_minutes:
-        one: menos de um minuto
-        other: menos de %{count} minutos
+        one: há menos de um minuto
+        other: há menos de %{count} minutos
       less_than_x_seconds:
-        one: menos de 1 segundo
-        other: menos de %{count} segundos
+        one: há menos de 1 segundo
+        other: há menos de %{count} segundos
       over_x_years:
-        one: mais de 1 ano
-        other: mais de %{count} anos
+        one: há mais de 1 ano
+        other: há mais de %{count} anos
       x_days:
-        one: 1 dia
-        other: ! '%{count} dias'
+        one: há 1 dia
+        other: ! 'há %{count} dias'
       x_minutes:
-        one: 1 minuto
-        other: ! '%{count} minutos'
+        one: há 1 minuto
+        other: ! 'há %{count} minutos'
       x_months:
-        one: 1 mês
-        other: ! '%{count} meses'
+        one: há 1 mês
+        other: ! 'há %{count} meses'
       x_seconds:
-        one: 1 segundo
-        other: ! '%{count} segundos'
+        one: há 1 segundo
+        other: ! 'há %{count} segundos'
     prompts:
       day: Dia
       hour: Hora
@@ -196,7 +196,7 @@ pt-BR:
     formats:
       default: ! '%A, %d de %B de %Y, %H:%M h'
       long: ! '%A, %d de %B de %Y, %H:%M h'
-      short: ! '%d/%m, %H:%M h'
+      short: ! '%d/%m/%y às %Hh%M'
     pm: ''
   # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
   activemodel:

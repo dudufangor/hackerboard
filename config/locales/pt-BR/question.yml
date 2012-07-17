@@ -1,3 +1,13 @@
 pt-BR:
   question:
     published_at: "publicado %{time}"
+    views_html:
+      zero: "nenhum <span>acesso</span>"
+      one: "1 <span>acesso</span>"
+      other: "%{count} <span>acessos</span>"
+    replies_html:
+      zero: "nenhuma <span>resposta</span>"
+      one: "1 <span>resposta</span>"
+      other: "%{count} <span>respostas</span>"
+
+    about_question: "criou essa pergunta em %{time}"
