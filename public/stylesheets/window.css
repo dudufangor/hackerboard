@@ -1,0 +1,70 @@
+/**
+ * OVERRIDES
+ */
+.content {
+  background-image: none;
+}
+
+.page {
+  width: 550px;
+}
+
+.content .main {
+  width: auto;
+}
+
+/**
+ * FORM
+ */
+label {
+  color: #777;
+  font-weight: bold;
+  display: block;
+}
+
+form .hint {
+  color: #aaa;
+  font-size: 11px;
+}
+
+form input[type=text],
+form input[type=password],
+form input[type=email] {
+  font-size: 14px;
+  padding: 5px 5px;
+  width: 250px;
+}
+
+form p {
+  padding: 10px 0;
+}
+
+.submit {
+  background: #eaeff3;
+  border-top: 1px solid #cdd3dd;
+  padding: 20px;
+  margin: 20px -20px -20px -20px;
+}
+
+.submit .button {
+  margin-right: 10px;
+}
+
+.submit a {
+  color: #5e6a77;
+  font-weight: bold;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.submit a:hover {
+  text-decoration: underline;
+}
+
+/**
+ * NAVIGATION
+ */
+header.main .home,
+header.main .new-question {
+  display: none;
+}

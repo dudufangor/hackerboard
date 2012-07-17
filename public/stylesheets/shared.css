@@ -1,0 +1,80 @@
+/**
+ * NORMALIZE HTML5 TAGS FOR IE
+ */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, nav, section {
+  display: block;
+}
+
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+a img {
+  border: none;
+}
+
+/**
+ * RESET MARGINS AND PADDINGS
+ */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * THE CLEARFIX HACK
+ */
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+.group {
+  zoom: 1;
+}
+
+/**
+ * FLASH MESSAGES
+ */
+.message {
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+}
+
+.message.notice {
+  background: #0a0;
+}
+
+.message.alert {
+  background: #E92426;
+}
+
+/**
+ * ERROR MESSAGES
+ */
+.error-messages dt {
+  color: #E92426;
+  font-weight: bold;
+}
+
+.error-messages dd:before {
+  content: "•";
+  margin-right: 10px;
+}
+
+.field_with_errors input[type=text],
+.field_with_errors input[type=password],
+.field_with_errors input[type=email] {
+  background: #fcc;
+}

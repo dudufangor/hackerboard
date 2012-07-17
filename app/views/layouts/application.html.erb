@@ -2,15 +2,25 @@
 <html>
 <head>
   <title>Hackerboard</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "modernizr" %>
+  <%= stylesheet_link_tag "hb", "shared" %>
   <%= csrf_meta_tags %>
 </head>
 
 <body>
-  <%= render "shared/header" %>
-  <%= render "shared/flash_messages" %>
-  <%= render "questions/search" %>
-  <%= yield %>
-  <%#= javascript_include_tag "application" %>
+  <div class="page">
+  	<%= render "shared/header" %>
+  	<%= render "shared/flash_messages" %>
+  	<div class="content container group">
+  		<section class="main">
+  			<%= yield %>
+  		</section>
+
+  		<aside class="sidebar">
+		  	<%= render "questions/search" %>
+  		</aside>
+
+  	</div>
+  </div>
 </body>
 </html>

@@ -11,9 +11,9 @@ module ApplicationHelper
   # Display avatar and link to user profile.
   #
   def profile_link(user)
-    "".html_safe.tap do |html|
-      html << link_to(gravatar(user.email, :alt => user.name))
-      html << link_to(user.name, user_path(user))
+    content_tag :span, :class => "user" do
+      link_to(gravatar(user.email, :alt => user.name)) +
+      link_to(user.name, user_path(user))
     end
   end
 

@@ -55,6 +55,4 @@ ActiveRecord::Schema.define(:version => 20120715201749) do
     t.integer  "replies_count",   :default => 0
   end
 
-  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
-
 end
