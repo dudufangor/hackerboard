@@ -5,13 +5,18 @@ class FeedController < ApplicationController
 
 	def replies
 		@question = Question.find(params[:id])
-		@replies = @questions.replies.include(:user)
+		@replies = @question.replies.to_feed
 		render :feed
 	end
 	
 	def questions
+		@questions = Question.to_feed
+		render :feed
 	end
 
 	def category
+		@category = Category.find(params[:id])
+		@questions = @category.questions.to_feed
+		render :feed
 	end
 end

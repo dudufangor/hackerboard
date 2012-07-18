@@ -8,6 +8,8 @@ class Question < ActiveRecord::Base
 
   scope :recent, order("id desc")
   scope :unanswered, where(:replies_count => 0)
+  scope :to_feed, includes(:user).limit(10).order("id desc")
+
 
   validates_presence_of :title, :body, :category, :user
 

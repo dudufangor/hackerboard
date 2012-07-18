@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
   has_many :questions
   has_many :replies
 
-  scope :recent, limit(20).order("id desc")
+  scope :signed_up, limit(20).order("id desc")
 
   def password=(password)
     encryption = PasswordEncryptor.encrypt(password)

@@ -1,6 +1,6 @@
 class QuestionsSidebarPresenter
 	def users
-		@user ||= User.recent
+		@user ||= User.signed_up
 	end
 
 	def categories
