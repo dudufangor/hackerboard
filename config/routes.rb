@@ -2,6 +2,10 @@ Hackerboard::Application.routes.draw do
 	#scope "/:locale" do
 		root :to => "questions#index"
 
+		namespace :admin do
+			resources :categories
+		end
+
 		controller :feed do
 			get "/feed/questions/:id", :action => :replies, :as => :replies_feed
 			get "/feed/questions", :action => :questions, :as => :questions_feed

@@ -12,6 +12,11 @@ class User < ActiveRecord::Base
 
   scope :signed_up, limit(20).order("id desc")
 
+  def to_son(options = {})
+    options.merge!(:except => [:password_hash, :password_salt])
+    super(options)
+  end
+
   def password=(password)
     encryption = PasswordEncryptor.encrypt(password)
 

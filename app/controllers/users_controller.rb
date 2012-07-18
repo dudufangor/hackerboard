@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  layout "window"
+
   def new
     @user = User.new
   end
@@ -16,6 +18,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    
+    @user = User.find(params[:id])
+    render :layout => "application"
   end
 end

@@ -34,6 +34,7 @@ class QuestionsController < ApplicationController
 
   def new
     @question = Question.new
+    render :new, :layout => "window"
   end
 
   def create
@@ -42,7 +43,7 @@ class QuestionsController < ApplicationController
     if @question.save
       redirect_to question_path(@question), :notice => t("flash.questions.create.notice")
     else
-      render :new
+      render :new, :layout => "window"
     end
   end
 
@@ -51,3 +52,4 @@ class QuestionsController < ApplicationController
     @categories ||= Category.scoped
   end
 end
+ 
