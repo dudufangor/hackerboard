@@ -1,7 +1,7 @@
 pt-BR:
   flash:
     auth:
-      alert: "Você precisa fazer o login para acessar essa pagina."
+      alert: "Você precisar fazer o login para acessar esta página."
 
     users:
       create:
@@ -14,7 +14,7 @@ pt-BR:
 
     questions:
       create:
-        notice: "Sua pergunta foi adicionada com sucesso!"
+        notice: "Sua pergunta foi adiciona com sucesso!"
       search:
         alert: "A busca não está funcionando nesse momento! Tente novamente mais tarde."
 
@@ -23,3 +23,11 @@ pt-BR:
         notice: "Sua resposta foi adicionada!"
         alert: "Você precisa preencher sua resposta."
 
+    admin:
+      categories:
+        destroy:
+          notice: "Categoria removida com sucesso!"
+        create:
+          notice: "Categoria criada com sucesso!"
+        update:
+          notice: "Categoria atualizada com sucesso!"

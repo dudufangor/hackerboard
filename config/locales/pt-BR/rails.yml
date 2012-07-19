@@ -64,30 +64,30 @@ pt-BR:
         one: há 1 ano
         other: há %{count} anos
       almost_x_years:
-        one: há 1 ano
-        other: há %{count} anos
-      half_a_minute: há meio minuto
+        one: quase 1 ano
+        other: quase %{count} anos
+      half_a_minute: meio minuto
       less_than_x_minutes:
-        one: há menos de um minuto
-        other: há menos de %{count} minutos
+        one: menos de um minuto
+        other: menos de %{count} minutos
       less_than_x_seconds:
-        one: há menos de 1 segundo
-        other: há menos de %{count} segundos
+        one: menos de 1 segundo
+        other: menos de %{count} segundos
       over_x_years:
-        one: há mais de 1 ano
-        other: há mais de %{count} anos
+        one: mais de 1 ano
+        other: mais de %{count} anos
       x_days:
-        one: há 1 dia
-        other: ! 'há %{count} dias'
+        one: 1 dia
+        other: ! '%{count} dias'
       x_minutes:
-        one: há 1 minuto
-        other: ! 'há %{count} minutos'
+        one: 1 minuto
+        other: ! '%{count} minutos'
       x_months:
-        one: há 1 mês
-        other: ! 'há %{count} meses'
+        one: 1 mês
+        other: ! '%{count} meses'
       x_seconds:
-        one: há 1 segundo
-        other: ! 'há %{count} segundos'
+        one: 1 segundo
+        other: ! '%{count} segundos'
     prompts:
       day: Dia
       hour: Hora

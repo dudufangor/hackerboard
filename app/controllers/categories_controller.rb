@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-	def show
-		text = "WIP"
-	end
+  def show
+    render :text => "WIP"
+  end
 end

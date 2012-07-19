@@ -1,4 +1,4 @@
 pt-BR:
   reply:
+    about: "fez este comentário %{time}"
     need_to_be_logged: "Você precisa efetuar o login para responder."
-    about: "fez esse comentário %{time}"

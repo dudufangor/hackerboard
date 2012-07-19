@@ -21,7 +21,7 @@ module ApplicationHelper
   #
   def gravatar(email, options = {})
     hash = Digest::MD5.hexdigest(email.to_s)
-    url = "http://www.gravatar.com/avatar/#{hash}.jpg"
+    url = "http://www.gravatar.com/avatar/#{hash}.jpg?d=mm"
     image_tag url, options
   end
 end

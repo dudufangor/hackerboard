@@ -4,8 +4,8 @@
   <%= simple_format @question.body %>
 
   <p class="about">
-  	<%= profile_link(@question.user) %>
-  	<%= t("question.about_question", :time => l(@question.created_at, :format => :short)) %>
+    <%= profile_link(@question.user) %>
+    <%= t("question.about_question", :time => l(@question.created_at, :format => :short)) %>
   </p>
 </article>
 
@@ -15,20 +15,19 @@
 <%= render @reply_form.partial %>
 
 <% content_for :sidebar do %>
-	<h3><%= t("sidebar.about") %></h3>
+  <h3><%= t("sidebar.about") %></h3>
 
-	<ul class="stats">
-		<li>
-			<%= t("question.views_html", :count => @question.views_count) %>
-		</li>
-			<%= t("question.replies_html", :count => @question.replies_count) %>
-		<li>
-			<span></span>
-		</li>
+  <ul class="stats">
+    <li>
+      <%= t("question.views_html", :count => @question.views_count) %>
+    </li>
 
-		<li>
-			<%= link_to "RSS", replies_feed_path(@question), :class => "feed" %>
-		</li>	
+    <li>
+      <%= t("question.replies_html", :count => @question.replies_count) %>
+    </li>
 
-	</ul>
+    <li>
+      <%= link_to "RSS", replies_feed_path(@question), :class => "feed" %>
+    </li>
+  </ul>
 <% end %>

@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
 
   # before_filter :set_locale_by_scope
   before_filter :set_locale_by_subdomain
+
   private
   def logged_in?
     current_user.present?
@@ -33,5 +34,4 @@ class ApplicationController < ActionController::Base
     locale = I18n.default_locale unless I18n.available_locales.include?(locale)
     I18n.locale = locale
   end
-
 end

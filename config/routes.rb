@@ -3,7 +3,11 @@ Hackerboard::Application.routes.draw do
 		root :to => "questions#index"
 
 		namespace :admin do
-			resources :categories
+			resources :categories do
+				member do
+					get :remove
+				end
+			end
 		end
 
 		controller :feed do

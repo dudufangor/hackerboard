@@ -1,11 +1,13 @@
 class AdminController < ApplicationController
-	before_filter :authorize_user
+  before_filter :authorize_user
 
-	private
+  private
+  def authorize_user
+    valid = authenticate_with_http_basic do |user, password|
+      user = Authenticator.authenticate(user, password)
+      user && user.admin?
+    end
 
-	def authorize_user
-		authenticate_or_request_with_http_digest("Hackerboard Admin") do |user, password|
-			logged_in? && current_user.email == user
-		end
-	end
+    request_http_basic_authentication unless valid
+  end
 end

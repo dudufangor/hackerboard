@@ -21,8 +21,6 @@ describe Mailer do
     its(:subject) { should eql("Bem-vindo ao Hackerboard") }
     its(:from) { should include("noreply@hackerboard.com") }
 
-    its(:parts) { should have(2).items}
-
     it { should be_multipart }
 
     context "html email" do

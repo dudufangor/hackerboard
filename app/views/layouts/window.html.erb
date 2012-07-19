@@ -3,20 +3,22 @@
 <head>
   <title>Hackerboard</title>
   <%= javascript_include_tag "modernizr" %>
-  <%= stylesheet_link_tag "hb", "shared", "window" %>
+  <%= stylesheet_link_tag "shared", "hb", "window" %>
   <%= csrf_meta_tags %>
 </head>
 
 <body>
   <div class="page">
-  	<%= render "shared/header" %>
-  	<%= render "shared/flash_messages" %>
-  	<div class="content container group">
-  		<section class="main">
-  			<%= yield %>
-  		</section>
-  	</div>
+    <%= render "shared/header" %>
+    <%= render "shared/flash_messages" %>
+
+    <div class="content container group">
+      <section class="main">
+        <%= yield %>
+      </section>
+    </div>
   </div>
+
   <%= javascript_include_tag "jquery", "script" %>
 </body>
 </html>
